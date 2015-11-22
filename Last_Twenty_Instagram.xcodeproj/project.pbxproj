@@ -7,25 +7,35 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B768E2AFFA358781E003AB1C /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1C89968B116ECDC4991D9A97 /* libPods.a */; };
 		DF381B851C016236000B9AE8 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = DF381B841C016236000B9AE8 /* main.m */; };
 		DF381B881C016236000B9AE8 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = DF381B871C016236000B9AE8 /* AppDelegate.m */; };
-		DF381B8B1C016236000B9AE8 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DF381B8A1C016236000B9AE8 /* ViewController.m */; };
+		DF381B8B1C016236000B9AE8 /* JLCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DF381B8A1C016236000B9AE8 /* JLCollectionViewController.m */; };
 		DF381B8E1C016236000B9AE8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DF381B8C1C016236000B9AE8 /* Main.storyboard */; };
 		DF381B901C016236000B9AE8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DF381B8F1C016236000B9AE8 /* Assets.xcassets */; };
 		DF381B931C016236000B9AE8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DF381B911C016236000B9AE8 /* LaunchScreen.storyboard */; };
+		DF381B9C1C01B3E3000B9AE8 /* JLCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = DF381B9B1C01B3E3000B9AE8 /* JLCollectionViewCell.m */; };
+		DF381B9F1C01B744000B9AE8 /* JLAPIManager.m in Sources */ = {isa = PBXBuildFile; fileRef = DF381B9E1C01B744000B9AE8 /* JLAPIManager.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1C89968B116ECDC4991D9A97 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		85E4151D8035C06DB7FCD295 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
+		BE5C76B9A5E961AED9457A5A /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		DF381B801C016236000B9AE8 /* Last_Twenty_Instagram.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Last_Twenty_Instagram.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DF381B841C016236000B9AE8 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		DF381B861C016236000B9AE8 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		DF381B871C016236000B9AE8 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		DF381B891C016236000B9AE8 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		DF381B8A1C016236000B9AE8 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		DF381B891C016236000B9AE8 /* JLCollectionViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JLCollectionViewController.h; sourceTree = "<group>"; };
+		DF381B8A1C016236000B9AE8 /* JLCollectionViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JLCollectionViewController.m; sourceTree = "<group>"; };
 		DF381B8D1C016236000B9AE8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		DF381B8F1C016236000B9AE8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		DF381B921C016236000B9AE8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		DF381B941C016236000B9AE8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DF381B9A1C01B3E3000B9AE8 /* JLCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JLCollectionViewCell.h; sourceTree = "<group>"; };
+		DF381B9B1C01B3E3000B9AE8 /* JLCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JLCollectionViewCell.m; sourceTree = "<group>"; };
+		DF381B9D1C01B744000B9AE8 /* JLAPIManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JLAPIManager.h; sourceTree = "<group>"; };
+		DF381B9E1C01B744000B9AE8 /* JLAPIManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JLAPIManager.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -33,17 +43,37 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B768E2AFFA358781E003AB1C /* libPods.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		72DCDB97DA6232DC1DD4E089 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				1C89968B116ECDC4991D9A97 /* libPods.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		CA27680B2E829C8F70AA561C /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				85E4151D8035C06DB7FCD295 /* Pods.debug.xcconfig */,
+				BE5C76B9A5E961AED9457A5A /* Pods.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		DF381B771C016236000B9AE8 = {
 			isa = PBXGroup;
 			children = (
 				DF381B821C016236000B9AE8 /* Last_Twenty_Instagram */,
 				DF381B811C016236000B9AE8 /* Products */,
+				CA27680B2E829C8F70AA561C /* Pods */,
+				72DCDB97DA6232DC1DD4E089 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -58,14 +88,12 @@
 		DF381B821C016236000B9AE8 /* Last_Twenty_Instagram */ = {
 			isa = PBXGroup;
 			children = (
-				DF381B861C016236000B9AE8 /* AppDelegate.h */,
-				DF381B871C016236000B9AE8 /* AppDelegate.m */,
-				DF381B891C016236000B9AE8 /* ViewController.h */,
-				DF381B8A1C016236000B9AE8 /* ViewController.m */,
 				DF381B8C1C016236000B9AE8 /* Main.storyboard */,
 				DF381B8F1C016236000B9AE8 /* Assets.xcassets */,
 				DF381B911C016236000B9AE8 /* LaunchScreen.storyboard */,
-				DF381B941C016236000B9AE8 /* Info.plist */,
+				DF381BA01C01B76C000B9AE8 /* View */,
+				DF381BA11C01B774000B9AE8 /* Controller */,
+				DF381BA21C01B7A1000B9AE8 /* Manager */,
 				DF381B831C016236000B9AE8 /* Supporting Files */,
 			);
 			path = Last_Twenty_Instagram;
@@ -74,9 +102,39 @@
 		DF381B831C016236000B9AE8 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				DF381B861C016236000B9AE8 /* AppDelegate.h */,
+				DF381B871C016236000B9AE8 /* AppDelegate.m */,
+				DF381B941C016236000B9AE8 /* Info.plist */,
 				DF381B841C016236000B9AE8 /* main.m */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		DF381BA01C01B76C000B9AE8 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				DF381B9A1C01B3E3000B9AE8 /* JLCollectionViewCell.h */,
+				DF381B9B1C01B3E3000B9AE8 /* JLCollectionViewCell.m */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		DF381BA11C01B774000B9AE8 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				DF381B891C016236000B9AE8 /* JLCollectionViewController.h */,
+				DF381B8A1C016236000B9AE8 /* JLCollectionViewController.m */,
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
+		DF381BA21C01B7A1000B9AE8 /* Manager */ = {
+			isa = PBXGroup;
+			children = (
+				DF381B9D1C01B744000B9AE8 /* JLAPIManager.h */,
+				DF381B9E1C01B744000B9AE8 /* JLAPIManager.m */,
+			);
+			name = Manager;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -86,9 +144,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = DF381B971C016236000B9AE8 /* Build configuration list for PBXNativeTarget "Last_Twenty_Instagram" */;
 			buildPhases = (
+				6E76E601E292651B60F2F598 /* Check Pods Manifest.lock */,
 				DF381B7C1C016236000B9AE8 /* Sources */,
 				DF381B7D1C016236000B9AE8 /* Frameworks */,
 				DF381B7E1C016236000B9AE8 /* Resources */,
+				3BD2F0A3DD7012284B880556 /* Embed Pods Frameworks */,
+				F75A0EE5E4309826021C2E9C /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -110,6 +171,7 @@
 				TargetAttributes = {
 					DF381B7F1C016236000B9AE8 = {
 						CreatedOnToolsVersion = 7.1.1;
+						DevelopmentTeam = 668VK7AL9G;
 					};
 				};
 			};
@@ -144,13 +206,63 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		3BD2F0A3DD7012284B880556 /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		6E76E601E292651B60F2F598 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		F75A0EE5E4309826021C2E9C /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		DF381B7C1C016236000B9AE8 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DF381B8B1C016236000B9AE8 /* ViewController.m in Sources */,
+				DF381B8B1C016236000B9AE8 /* JLCollectionViewController.m in Sources */,
+				DF381B9F1C01B744000B9AE8 /* JLAPIManager.m in Sources */,
 				DF381B881C016236000B9AE8 /* AppDelegate.m in Sources */,
+				DF381B9C1C01B3E3000B9AE8 /* JLCollectionViewCell.m in Sources */,
 				DF381B851C016236000B9AE8 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -259,8 +371,10 @@
 		};
 		DF381B981C016236000B9AE8 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 85E4151D8035C06DB7FCD295 /* Pods.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = Last_Twenty_Instagram/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "JLI.Last-Twenty-Instagram";
@@ -270,8 +384,10 @@
 		};
 		DF381B991C016236000B9AE8 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = BE5C76B9A5E961AED9457A5A /* Pods.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = Last_Twenty_Instagram/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "JLI.Last-Twenty-Instagram";
@@ -298,6 +414,7 @@
 				DF381B991C016236000B9AE8 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
