@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface JLCollectionViewCell : UICollectionViewCell
+@interface LTICollectionViewCell : UICollectionViewCell
 @property (weak, nonatomic) IBOutlet UIImageView *imageView;
 
 @end

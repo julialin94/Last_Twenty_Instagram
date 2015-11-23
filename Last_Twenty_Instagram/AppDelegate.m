@@ -7,6 +7,8 @@
 //
 
 #import "AppDelegate.h"
+#import "LTIAccessTokenManager.h"
+#import "LTIConstants.h"
 
 @interface AppDelegate ()
 
@@ -14,7 +16,15 @@
 
 @implementation AppDelegate
 
-
+-(BOOL)application:(UIApplication *)app openURL:(NSURL *)url options:(NSDictionary<NSString *,id> *)options {
+    NSString * urlString = url.absoluteString;
+    [LTIAccessTokenManager setAccessToken:urlString];
+    
+    //post notification to reload
+    [[NSNotificationCenter defaultCenter] postNotificationName:LOGIN_NOTIFICATION object:self];
+    
+    return YES;
+}
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
     return YES;

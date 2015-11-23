@@ -20,11 +20,24 @@ PODS:
   - AFNetworking/UIKit (2.6.3):
     - AFNetworking/NSURLConnection
     - AFNetworking/NSURLSession
+  - FLAnimatedImage (1.0.8)
+  - PINCache (2.1.1)
+  - PINRemoteImage (1.2.2):
+    - PINRemoteImage/FLAnimatedImage (= 1.2.2)
+  - PINRemoteImage/Core (1.2.2):
+    - PINCache (>= 2.1)
+  - PINRemoteImage/FLAnimatedImage (1.2.2):
+    - FLAnimatedImage (>= 1.0)
+    - PINRemoteImage/Core
 
 DEPENDENCIES:
   - AFNetworking (~> 2.5)
+  - PINRemoteImage (= 1.2.2)
 
 SPEC CHECKSUMS:
   AFNetworking: cb8d14a848e831097108418f5d49217339d4eb60
+  FLAnimatedImage: f9422f796135aff80d8c00b2afc48015bb746e24
+  PINCache: 69f0e0a019ce45fcf72ad2a5e97d977c9bb53bc7
+  PINRemoteImage: 9f6f484bbceee15e2df5aee0beeac2e261e4ac81
 
 COCOAPODS: 0.39.0

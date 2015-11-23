@@ -6,8 +6,8 @@
 //  Copyright © 2015 Julia Lin. All rights reserved.
 //
 
-#import "JLCollectionViewCell.h"
+#import "LTICollectionViewCell.h"
 
-@implementation JLCollectionViewCell
+@implementation LTICollectionViewCell
 
 @end

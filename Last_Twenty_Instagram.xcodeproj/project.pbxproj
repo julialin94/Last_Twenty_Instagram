@@ -10,12 +10,13 @@
 		B768E2AFFA358781E003AB1C /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1C89968B116ECDC4991D9A97 /* libPods.a */; };
 		DF381B851C016236000B9AE8 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = DF381B841C016236000B9AE8 /* main.m */; };
 		DF381B881C016236000B9AE8 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = DF381B871C016236000B9AE8 /* AppDelegate.m */; };
-		DF381B8B1C016236000B9AE8 /* JLCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DF381B8A1C016236000B9AE8 /* JLCollectionViewController.m */; };
+		DF381B8B1C016236000B9AE8 /* LTICollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DF381B8A1C016236000B9AE8 /* LTICollectionViewController.m */; };
 		DF381B8E1C016236000B9AE8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DF381B8C1C016236000B9AE8 /* Main.storyboard */; };
 		DF381B901C016236000B9AE8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DF381B8F1C016236000B9AE8 /* Assets.xcassets */; };
 		DF381B931C016236000B9AE8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DF381B911C016236000B9AE8 /* LaunchScreen.storyboard */; };
-		DF381B9C1C01B3E3000B9AE8 /* JLCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = DF381B9B1C01B3E3000B9AE8 /* JLCollectionViewCell.m */; };
-		DF381B9F1C01B744000B9AE8 /* JLAPIManager.m in Sources */ = {isa = PBXBuildFile; fileRef = DF381B9E1C01B744000B9AE8 /* JLAPIManager.m */; };
+		DF381B9C1C01B3E3000B9AE8 /* LTICollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = DF381B9B1C01B3E3000B9AE8 /* LTICollectionViewCell.m */; };
+		DF381B9F1C01B744000B9AE8 /* LTIAPIManager.m in Sources */ = {isa = PBXBuildFile; fileRef = DF381B9E1C01B744000B9AE8 /* LTIAPIManager.m */; };
+		DFD8A5EB1C01DCF60029FD22 /* LTIAccessTokenManager.m in Sources */ = {isa = PBXBuildFile; fileRef = DFD8A5EA1C01DCF60029FD22 /* LTIAccessTokenManager.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,16 +27,19 @@
 		DF381B841C016236000B9AE8 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		DF381B861C016236000B9AE8 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		DF381B871C016236000B9AE8 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		DF381B891C016236000B9AE8 /* JLCollectionViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JLCollectionViewController.h; sourceTree = "<group>"; };
-		DF381B8A1C016236000B9AE8 /* JLCollectionViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JLCollectionViewController.m; sourceTree = "<group>"; };
+		DF381B891C016236000B9AE8 /* LTICollectionViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LTICollectionViewController.h; sourceTree = "<group>"; };
+		DF381B8A1C016236000B9AE8 /* LTICollectionViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LTICollectionViewController.m; sourceTree = "<group>"; };
 		DF381B8D1C016236000B9AE8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		DF381B8F1C016236000B9AE8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		DF381B921C016236000B9AE8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		DF381B941C016236000B9AE8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		DF381B9A1C01B3E3000B9AE8 /* JLCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JLCollectionViewCell.h; sourceTree = "<group>"; };
-		DF381B9B1C01B3E3000B9AE8 /* JLCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JLCollectionViewCell.m; sourceTree = "<group>"; };
-		DF381B9D1C01B744000B9AE8 /* JLAPIManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JLAPIManager.h; sourceTree = "<group>"; };
-		DF381B9E1C01B744000B9AE8 /* JLAPIManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JLAPIManager.m; sourceTree = "<group>"; };
+		DF381B9A1C01B3E3000B9AE8 /* LTICollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LTICollectionViewCell.h; sourceTree = "<group>"; };
+		DF381B9B1C01B3E3000B9AE8 /* LTICollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LTICollectionViewCell.m; sourceTree = "<group>"; };
+		DF381B9D1C01B744000B9AE8 /* LTIAPIManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LTIAPIManager.h; sourceTree = "<group>"; };
+		DF381B9E1C01B744000B9AE8 /* LTIAPIManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LTIAPIManager.m; sourceTree = "<group>"; };
+		DFD8A5E91C01DCF60029FD22 /* LTIAccessTokenManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LTIAccessTokenManager.h; sourceTree = "<group>"; };
+		DFD8A5EA1C01DCF60029FD22 /* LTIAccessTokenManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LTIAccessTokenManager.m; sourceTree = "<group>"; };
+		DFD8A5EC1C0307750029FD22 /* LTIConstants.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = LTIConstants.h; path = Last_Twenty_Instagram/LTIConstants.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -71,6 +75,7 @@
 			isa = PBXGroup;
 			children = (
 				DF381B821C016236000B9AE8 /* Last_Twenty_Instagram */,
+				DFD8A5EC1C0307750029FD22 /* LTIConstants.h */,
 				DF381B811C016236000B9AE8 /* Products */,
 				CA27680B2E829C8F70AA561C /* Pods */,
 				72DCDB97DA6232DC1DD4E089 /* Frameworks */,
@@ -113,8 +118,8 @@
 		DF381BA01C01B76C000B9AE8 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				DF381B9A1C01B3E3000B9AE8 /* JLCollectionViewCell.h */,
-				DF381B9B1C01B3E3000B9AE8 /* JLCollectionViewCell.m */,
+				DF381B9A1C01B3E3000B9AE8 /* LTICollectionViewCell.h */,
+				DF381B9B1C01B3E3000B9AE8 /* LTICollectionViewCell.m */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -122,8 +127,8 @@
 		DF381BA11C01B774000B9AE8 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				DF381B891C016236000B9AE8 /* JLCollectionViewController.h */,
-				DF381B8A1C016236000B9AE8 /* JLCollectionViewController.m */,
+				DF381B891C016236000B9AE8 /* LTICollectionViewController.h */,
+				DF381B8A1C016236000B9AE8 /* LTICollectionViewController.m */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -131,8 +136,10 @@
 		DF381BA21C01B7A1000B9AE8 /* Manager */ = {
 			isa = PBXGroup;
 			children = (
-				DF381B9D1C01B744000B9AE8 /* JLAPIManager.h */,
-				DF381B9E1C01B744000B9AE8 /* JLAPIManager.m */,
+				DF381B9D1C01B744000B9AE8 /* LTIAPIManager.h */,
+				DF381B9E1C01B744000B9AE8 /* LTIAPIManager.m */,
+				DFD8A5E91C01DCF60029FD22 /* LTIAccessTokenManager.h */,
+				DFD8A5EA1C01DCF60029FD22 /* LTIAccessTokenManager.m */,
 			);
 			name = Manager;
 			sourceTree = "<group>";
@@ -259,10 +266,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DF381B8B1C016236000B9AE8 /* JLCollectionViewController.m in Sources */,
-				DF381B9F1C01B744000B9AE8 /* JLAPIManager.m in Sources */,
+				DF381B8B1C016236000B9AE8 /* LTICollectionViewController.m in Sources */,
+				DFD8A5EB1C01DCF60029FD22 /* LTIAccessTokenManager.m in Sources */,
+				DF381B9F1C01B744000B9AE8 /* LTIAPIManager.m in Sources */,
 				DF381B881C016236000B9AE8 /* AppDelegate.m in Sources */,
-				DF381B9C1C01B3E3000B9AE8 /* JLCollectionViewCell.m in Sources */,
+				DF381B9C1C01B3E3000B9AE8 /* LTICollectionViewCell.m in Sources */,
 				DF381B851C016236000B9AE8 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
