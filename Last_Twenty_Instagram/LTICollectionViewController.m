@@ -23,7 +23,7 @@
 @end
 
 @implementation LTICollectionViewController
-
+#pragma mark - View
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.refreshControl = [[UIRefreshControl alloc] init];
@@ -33,7 +33,6 @@
                             action:@selector(getRecentMediaOrLogin)
                   forControlEvents:UIControlEventValueChanged];
     [self.collectionView addSubview:self.refreshControl];
-    
     self.collectionView.alwaysBounceVertical = YES;
 }
 
@@ -46,19 +45,6 @@
     
 }
 
--(void)getRecentMediaOrLogin {
-    if (![LTIAccessTokenManager accessToken]) {
-        [self.refreshControl endRefreshing];
-        [self authenticate];
-    }
-    else {
-        [self getRecentMedia];
-    }
-}
-
--(void)authenticate {
-    [[UIApplication sharedApplication] openURL:[NSURL URLWithString:@"https://instagram.com/oauth/authorize/?client_id=94026f0150eb4ff6ac201289ff6556c8&redirect_uri=LastTwentyInstagram://&response_type=token"]];
-}
 
 -(void)viewWillDisappear:(BOOL)animated {
     [[NSNotificationCenter defaultCenter] removeObserver:self
@@ -68,6 +54,22 @@
 
 -(void)notificationFired:(id)notification {
     [self getRecentMedia];
+}
+
+#pragma mark - Authentication
+-(void)authenticate {
+    [[UIApplication sharedApplication] openURL:[NSURL URLWithString:@"https://instagram.com/oauth/authorize/?client_id=94026f0150eb4ff6ac201289ff6556c8&redirect_uri=LastTwentyInstagram://&response_type=token"]];
+}
+
+#pragma mark - Get Recent Media Methods
+-(void)getRecentMediaOrLogin {
+    if (![LTIAccessTokenManager accessToken]) {
+        [self.refreshControl endRefreshing];
+        [self authenticate];
+    }
+    else {
+        [self getRecentMedia];
+    }
 }
 
 -(void)getRecentMedia {
@@ -85,6 +87,7 @@
 
 }
 
+#pragma mark - Get Recent Media Callback Methods
 -(void)getRecentMediaFailedWithError:(NSError *)error {
     NSString * message;
     UIAlertAction * action;
@@ -119,6 +122,7 @@
     });
 }
 
+#pragma mark - Collection View Delegate Methods
 -(NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section {
     return self.recentMedia.count;
 }
