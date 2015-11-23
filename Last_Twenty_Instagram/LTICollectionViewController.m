@@ -15,9 +15,10 @@
 #import <PINRemoteImage/UIImageView+PINRemoteImage.h>
 
 @interface LTICollectionViewController ()
-@property (weak, nonatomic) IBOutlet UICollectionView *collectionView;
 
+@property (weak, nonatomic) IBOutlet UICollectionView *collectionView;
 @property (nonatomic, strong) NSArray * recentMedia;
+@property (nonatomic, strong) UIRefreshControl * refreshControl;
 
 @end
 
@@ -25,6 +26,15 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    self.refreshControl = [[UIRefreshControl alloc] init];
+    self.refreshControl.backgroundColor = [UIColor clearColor];
+    self.refreshControl.tintColor = [UIColor lightGrayColor];
+    [self.refreshControl addTarget:self
+                            action:@selector(getRecentMediaOrLogin)
+                  forControlEvents:UIControlEventValueChanged];
+    [self.collectionView addSubview:self.refreshControl];
+    
+    self.collectionView.alwaysBounceVertical = YES;
 }
 
 -(void)viewDidAppear:(BOOL)animated {
@@ -32,8 +42,13 @@
                                              selector:@selector(notificationFired:)
                                                  name:LOGIN_NOTIFICATION
                                                object:nil];
+    [self getRecentMediaOrLogin];
     
+}
+
+-(void)getRecentMediaOrLogin {
     if (![LTIAccessTokenManager accessToken]) {
+        [self.refreshControl endRefreshing];
         [self authenticate];
     }
     else {
@@ -56,8 +71,10 @@
 }
 
 -(void)getRecentMedia {
+    [self.refreshControl beginRefreshing];
     [LTIAPIManager getSelfRecentMediaWithCount:[NSNumber numberWithInt:20]
                                 andCompletion:^(NSDictionary * data, NSError * error) {
+                                    [self.refreshControl endRefreshing];
                                     if (error) {
                                         [self getRecentMediaFailedWithError:error];
                                     }
