@@ -21,6 +21,7 @@ PODS:
     - AFNetworking/NSURLConnection
     - AFNetworking/NSURLSession
   - FLAnimatedImage (1.0.8)
+  - KeychainItemWrapper (1.2)
   - PINCache (2.1.1)
   - PINRemoteImage (1.2.2):
     - PINRemoteImage/FLAnimatedImage (= 1.2.2)
@@ -32,11 +33,13 @@ PODS:
 
 DEPENDENCIES:
   - AFNetworking (~> 2.5)
+  - KeychainItemWrapper (= 1.2)
   - PINRemoteImage (= 1.2.2)
 
 SPEC CHECKSUMS:
   AFNetworking: cb8d14a848e831097108418f5d49217339d4eb60
   FLAnimatedImage: f9422f796135aff80d8c00b2afc48015bb746e24
+  KeychainItemWrapper: 67a240172ed669842bc6bc13ed554dcd50469fa2
   PINCache: 69f0e0a019ce45fcf72ad2a5e97d977c9bb53bc7
   PINRemoteImage: 9f6f484bbceee15e2df5aee0beeac2e261e4ac81
 

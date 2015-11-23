@@ -34,11 +34,15 @@
                                                object:nil];
     
     if (![LTIAccessTokenManager accessToken]) {
-        [[UIApplication sharedApplication] openURL:[NSURL URLWithString:@"https://instagram.com/oauth/authorize/?client_id=94026f0150eb4ff6ac201289ff6556c8&redirect_uri=LastTwentyInstagram://&response_type=token"]];
+        [self authenticate];
     }
     else {
         [self getRecentMedia];
     }
+}
+
+-(void)authenticate {
+    [[UIApplication sharedApplication] openURL:[NSURL URLWithString:@"https://instagram.com/oauth/authorize/?client_id=94026f0150eb4ff6ac201289ff6556c8&redirect_uri=LastTwentyInstagram://&response_type=token"]];
 }
 
 -(void)viewWillDisappear:(BOOL)animated {
@@ -55,7 +59,7 @@
     [LTIAPIManager getSelfRecentMediaWithCount:[NSNumber numberWithInt:20]
                                 andCompletion:^(NSDictionary * data, NSError * error) {
                                     if (error) {
-                                        [self getRecentMediaFailedWithError];
+                                        [self getRecentMediaFailedWithError:error];
                                     }
                                     else {
                                         [self getRecentMediaSuccessWithData:data];
@@ -64,16 +68,32 @@
 
 }
 
--(void)getRecentMediaFailedWithError {
+-(void)getRecentMediaFailedWithError:(NSError *)error {
+    NSString * message;
+    UIAlertAction * action;
+    if (error.code == NSURLErrorBadServerResponse) {
+        message = @"Please log in again.";
+        action = [UIAlertAction actionWithTitle:@"Okay"
+                                 style:UIAlertActionStyleDefault
+                                        handler:^(UIAlertAction * action) {
+                                            NSLog(@"action: %@", action);
+                                            [self authenticate];
+                                        }];
+    }
+    else {
+        message = @"Unable to get recent media.";
+        action = [UIAlertAction actionWithTitle:@"Okay"
+                                 style:UIAlertActionStyleDefault
+                                        handler:nil];
+    }
     UIAlertController * ac = [UIAlertController alertControllerWithTitle:nil
-                                                                 message:@"Unable to get recent media."
+                                                                 message:message
                                                           preferredStyle:UIAlertControllerStyleAlert];
-    [ac addAction:[UIAlertAction actionWithTitle:@"Okay"
-                                           style:UIAlertActionStyleDefault
-                                         handler:nil]];
+    [ac addAction:action];
     [self presentViewController:ac
                        animated:YES
-                     completion:nil];}
+                     completion:nil];
+}
 
 -(void)getRecentMediaSuccessWithData:(NSDictionary *)data {
     self.recentMedia = data[@"data"];

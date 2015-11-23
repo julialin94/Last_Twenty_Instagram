@@ -40,6 +40,7 @@
 		DFD8A5E91C01DCF60029FD22 /* LTIAccessTokenManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LTIAccessTokenManager.h; sourceTree = "<group>"; };
 		DFD8A5EA1C01DCF60029FD22 /* LTIAccessTokenManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LTIAccessTokenManager.m; sourceTree = "<group>"; };
 		DFD8A5EC1C0307750029FD22 /* LTIConstants.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = LTIConstants.h; path = Last_Twenty_Instagram/LTIConstants.h; sourceTree = "<group>"; };
+		DFD8A5ED1C032AB80029FD22 /* Last_Twenty_Instagram.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = Last_Twenty_Instagram.entitlements; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -93,6 +94,7 @@
 		DF381B821C016236000B9AE8 /* Last_Twenty_Instagram */ = {
 			isa = PBXGroup;
 			children = (
+				DFD8A5ED1C032AB80029FD22 /* Last_Twenty_Instagram.entitlements */,
 				DF381B8C1C016236000B9AE8 /* Main.storyboard */,
 				DF381B8F1C016236000B9AE8 /* Assets.xcassets */,
 				DF381B911C016236000B9AE8 /* LaunchScreen.storyboard */,
@@ -179,6 +181,11 @@
 					DF381B7F1C016236000B9AE8 = {
 						CreatedOnToolsVersion = 7.1.1;
 						DevelopmentTeam = 668VK7AL9G;
+						SystemCapabilities = {
+							com.apple.Keychain = {
+								enabled = 1;
+							};
+						};
 					};
 				};
 			};
@@ -382,6 +389,7 @@
 			baseConfigurationReference = 85E4151D8035C06DB7FCD295 /* Pods.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = Last_Twenty_Instagram/Last_Twenty_Instagram.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = Last_Twenty_Instagram/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -395,6 +403,7 @@
 			baseConfigurationReference = BE5C76B9A5E961AED9457A5A /* Pods.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = Last_Twenty_Instagram/Last_Twenty_Instagram.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = Last_Twenty_Instagram/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";

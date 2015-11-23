@@ -7,27 +7,32 @@
 //
 
 #import "LTIAccessTokenManager.h"
+#import <KeychainItemWrapper/KeychainItemWrapper.h>
 
 @implementation LTIAccessTokenManager
 
-+(NSString *)accessToken {
-    NSUserDefaults * defaults = [NSUserDefaults standardUserDefaults];
-    return [defaults objectForKey:@"access_token"];
++(KeychainItemWrapper *)keychain {
+    static KeychainItemWrapper * keychain = nil;
+    static dispatch_once_t onceToken;
+    dispatch_once(&onceToken, ^{
+        keychain = [[KeychainItemWrapper alloc] initWithIdentifier:@"lti_keychain" accessGroup:nil];
+    });
+    return keychain;
 }
 
-#warning Note: Storing Access Token in NSUserDefaults potentially unsafe
++(NSString *)accessToken {
+    NSString * accessToken = [[self keychain] objectForKey:(NSString *)kSecValueData];
+    return accessToken.length == 0 ? nil : accessToken;
+}
+
 +(void)setAccessToken:(NSString *)url {
     NSString *access_token;
     NSRange access_token_range = [url rangeOfString:@"access_token="];
     if (access_token_range.length > 0) {
         NSUInteger from_index = access_token_range.location + access_token_range.length;
         access_token = [url substringFromIndex:from_index];
-        NSLog(@"access_token:  %@", access_token);
     }
-    
-    NSUserDefaults * defaults = [NSUserDefaults standardUserDefaults];
-    [defaults setObject:access_token forKey:@"access_token"];
-    [defaults synchronize];
+    [[self keychain] setObject:access_token forKey:(NSString *)kSecValueData];
 }
 
 @end
